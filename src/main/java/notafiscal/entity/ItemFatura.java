@@ -29,8 +29,9 @@ public class ItemFatura {
     @JoinColumn(name = "service_id")
     private Servico servico;
 
-    @Column(name = "resource_id")
-    private Integer idNota;
+    @ManyToOne
+    @JoinColumn(name = "resource_id")
+    private Recurso recurso;
 
     @Column(name = "quantity")
     private Integer quantidade;

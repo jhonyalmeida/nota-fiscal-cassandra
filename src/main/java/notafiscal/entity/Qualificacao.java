@@ -8,22 +8,16 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "resource_qualification")
 
 @Data
-public class Cliente {
+public class Qualificacao {
 
     @Id
-    @Column(name = "id_customer")
+    @Column(name = "id_resource_qualification")
     private Integer id;
 
-    @Column(name = "name")
+    @Column(name = "qualification_name")
     private String nome;
-
-    @Column(name = "address")
-    private String endereco;
-
-    @Column(name = "country")
-    private String pais;
-
+    
 }
