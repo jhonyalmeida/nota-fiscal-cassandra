@@ -17,4 +17,4 @@ datasources:
 jpa:
     default:
         packages-to-scan:
-            - 'notafiscal'
+            - 'notafiscal.entity'
