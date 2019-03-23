@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -13,35 +15,37 @@ import lombok.Data;
 @Table(name = "ivoice_item")
 
 @Data
-public class Item_fatura {
+public class ItemFatura {
 
     @Id
     @Column(name = "invoice_item_id")
-    private Integer id;
+    private Long id;
 
-    @Column(name = "invoice_id")
-    private Integer fatura_id;
+    @ManyToOne
+    @JoinColumn(name = "invoice_id")
+    private Fatura fatura;
 
-    @Column(name = "service_id")
-    private Integer id_servico;
+    @ManyToOne
+    @JoinColumn(name = "service_id")
+    private Servico servico;
 
     @Column(name = "resource_id")
-    private Integer nota_id;
+    private Integer idNota;
 
     @Column(name = "quantity")
     private Integer quantidade;
 
     @Column(name = "unit_value")
-    private Double valor_unitario;
+    private Double valorUnitario;
 
     @Column(name = "tax_percent")
-    private Double taxa_perc;
+    private Double percentualImposto;
 
     @Column(name = "discount_percent")
     private Double desconto;
 
     @Column(name = "date_of_reference")
-    private LocalDate data;
+    private LocalDate dataReferencia;
 
     @Column(name = "subtotal")
     private Double subtotal;

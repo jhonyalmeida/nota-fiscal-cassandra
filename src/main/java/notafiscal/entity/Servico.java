@@ -15,7 +15,7 @@ public class Servico {
 
     @Id
     @Column(name = "service_id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "service_description")
     private String descricao;
