@@ -18,3 +18,11 @@ jpa:
     default:
         packages-to-scan:
             - 'notafiscal.entity'
+
+cassandra:
+    default:
+        clusterName: "Test Cluster"
+        contactPoint: "localhost"
+        port: 9042
+        maxSchemaAgreementWaitSeconds: 20
+        ssl: false

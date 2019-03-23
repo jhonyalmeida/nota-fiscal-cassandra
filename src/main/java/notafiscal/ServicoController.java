@@ -9,6 +9,7 @@ import io.micronaut.configuration.hibernate.jpa.scope.CurrentSession;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.spring.tx.annotation.Transactional;
+import notafiscal.entity.Fatura;
 import notafiscal.entity.Servico;
 
 @Controller("/servicos")
@@ -23,9 +24,9 @@ public class ServicoController {
 
     @Get
     @Transactional(readOnly = true)
-    public List<Servico> findAll() {
+    public List<Fatura> findAll() {
         return entityManager
-                .createQuery("SELECT s FROM Servico s", Servico.class)
+                .createQuery("SELECT f FROM Fatura f left join fetch f.itens i", Fatura.class)
                 .getResultList();
     }
 

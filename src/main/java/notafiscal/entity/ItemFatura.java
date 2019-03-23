@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "ivoice_item")
+@Table(name = "invoice_item")
 
 @Data
 public class ItemFatura {
