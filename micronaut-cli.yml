@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: nota.fiscal
+---
+testFramework: junit
+sourceLanguage: java
