@@ -38,7 +38,6 @@ public class Fatura {
     @JoinColumn(name = "customer_id")
     private Cliente cliente;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "fatura")
     private List<ItemFatura> itens;
     

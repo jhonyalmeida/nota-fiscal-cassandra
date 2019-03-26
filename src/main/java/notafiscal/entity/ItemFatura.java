@@ -9,6 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 import lombok.Data;
 
 @Entity
@@ -21,16 +26,19 @@ public class ItemFatura {
     @Column(name = "invoice_item_id")
     private Long id;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "invoice_id")
     private Fatura fatura;
 
     @ManyToOne
     @JoinColumn(name = "service_id")
+    @NotFound(action = NotFoundAction.IGNORE)
     private Servico servico;
 
     @ManyToOne
     @JoinColumn(name = "resource_id")
+    @NotFound(action = NotFoundAction.IGNORE)
     private Recurso recurso;
 
     @Column(name = "quantity")
