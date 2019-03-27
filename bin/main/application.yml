@@ -21,7 +21,7 @@ jpa:
 
 cassandra:
     default:
-        clusterName: "Test Cluster"
+        clusterName: "Invoice"
         contactPoint: "localhost"
         port: 9042
         maxSchemaAgreementWaitSeconds: 20

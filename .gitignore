@@ -12,4 +12,6 @@ bin/
 .project
 .settings
 .classpath
-.vscode
+.vscode/
+.cassandraWorkbench.jsonc
+.cassandraWorkbench/

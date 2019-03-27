@@ -35,6 +35,8 @@ dependencies {
     compile "io.micronaut.configuration:micronaut-hibernate-jpa" 
     compile "io.micronaut.configuration:micronaut-jdbc-hikari"
     compile "io.micronaut.configuration:micronaut-hibernate-validator"
+    compile "io.micronaut.configuration:micronaut-cassandra"
+    compile "com.datastax.cassandra:cassandra-driver-extras:3.3.2"
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
     compileOnly "org.projectlombok:lombok:1.18.6"
     compileOnly "io.micronaut:micronaut-inject-java"

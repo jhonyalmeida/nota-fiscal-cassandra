@@ -8,18 +8,18 @@ USE invoice;
 
 CREATE TABLE invoice_item(
     invoice_number bigint,
-    invoice_total decimal STATIC,
+    invoice_total double STATIC,
     client_name text STATIC,
     client_address text STATIC,
     service_description text,
     quantity int,
-    unit_value decimal,
+    unit_value double,
     resource_name text,
-    resource_function text,
-    tax_percent decimal,
-    discount_percent decimal,
-    subtotal decimal,
-    reference_date timestamp,
+    resource_qualifications set<text>,
+    tax_percent double,
+    discount_percent double,
+    subtotal double,
+    reference_date date,
     PRIMARY KEY(
         (invoice_number),
         reference_date, service_description, resource_name
