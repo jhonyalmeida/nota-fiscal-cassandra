@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <h1>Nota Fiscal [[${fatura.numero}]]</h1>
+        <div th:each="item: ${fatura.itens}">
+            [[${item.servico.descricao}]]
+            [[${#numbers.formatDecimal(item.subtotal, 0, 'POINT', 2, 'COMMA')}]]
+        </div>
+    </body>
+</html>
