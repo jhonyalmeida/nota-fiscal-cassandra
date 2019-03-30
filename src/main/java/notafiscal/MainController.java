@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
@@ -58,6 +59,7 @@ public class MainController {
         templateResolver.setTemplateMode("HTML");
         
         TemplateEngine templateEngine = new TemplateEngine();
+        templateEngine.addDialect(new Java8TimeDialect());
         templateEngine.setTemplateResolver(templateResolver);
     
         Context context = new Context();

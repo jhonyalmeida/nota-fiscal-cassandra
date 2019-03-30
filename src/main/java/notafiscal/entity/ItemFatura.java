@@ -1,6 +1,9 @@
 package notafiscal.entity;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -60,5 +63,9 @@ public class ItemFatura {
 
     @Column(name = "subtotal")
     private Double subtotal;
+
+    public String getData() {
+       return dataReferencia != null ? dataReferencia.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : "";
+    }
 
 }

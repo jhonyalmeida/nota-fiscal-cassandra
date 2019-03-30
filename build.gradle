@@ -39,6 +39,7 @@ dependencies {
     compile "com.datastax.cassandra:cassandra-driver-extras:3.3.2"
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
     compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.6.RELEASE'
+    compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.3.RELEASE'
     compile group: 'org.xhtmlrenderer', name: 'flying-saucer-core', version: '9.1.6'
     compile group: 'org.xhtmlrenderer', name: 'flying-saucer-pdf-itext5', version: '9.1.6'
     compileOnly "org.projectlombok:lombok:1.18.6"
